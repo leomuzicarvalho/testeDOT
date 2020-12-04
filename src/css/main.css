@@ -1,0 +1,317 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slide-container {
+  position: relative;
+}
+
+.slide-container .slide-title {
+  width: 100%;
+  top: 0;
+  position: absolute;
+  text-align: center;
+  color: black;
+  z-index: 2;
+}
+
+.slide-container .slide-title .arrow-down {
+  background: url("../icons/arrow-down.png");
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  border: none;
+  transition: 0.4s all;
+  outline: none;
+  cursor: pointer;
+}
+
+.slide-container .slide-title .arrow-down:hover {
+  opacity: 0.6;
+}
+
+.slide-container .cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #454545;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media all and (max-width: 768px) {
+  .slide-container .cards {
+    flex-wrap: wrap;
+  }
+}
+
+.slide-container .cards .card-content {
+  max-width: 300px;
+  text-align: center;
+  color: #f2f2f2;
+}
+
+.slide-container .cards .card {
+  border: 8px solid #6f6f6f;
+  height: auto !important;
+  color: #f2f2f2;
+  max-width: 300px;
+}
+
+.slide-container .cards .card .card-img {
+  width: 100%;
+}
+
+.slide-container .each-slide .slide-image-container {
+  height: 500px;
+}
+
+.slide-container .indicators {
+  position: absolute;
+  background-color: rgba(84, 97, 48, 0.3);
+  bottom: 0;
+  width: 100%;
+}
+
+.slide-container .indicators li {
+  width: 50px !important;
+  height: 45px !important;
+}
+
+.slide-container .indicators .each-slideshow-indicator {
+  position: absolute;
+}
+
+.slide-container .indicators .each-slideshow-indicator:before {
+  top: 50% !important;
+  left: 50% !important;
+  padding: 7px;
+  border: 7px solid black !important;
+  background: white !important;
+}
+
+.slide-container .indicators .each-slideshow-indicator.active:before {
+  border: 7px solid white !important;
+  background: darkgreen !important;
+}
+
+.lightgray-bg {
+  background: #6f6f6f;
+}
+
+.flex {
+  display: flex;
+}
+
+@media all and (max-width: 768px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.rounded-img-section {
+  background-color: #6f6f6f;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.rounded-img-section .rounded-img img {
+  max-width: 360px;
+  height: 360px;
+  border: 15px solid #343434;
+  border-radius: 999px;
+}
+
+@media all and (max-width: 768px) {
+  .rounded-img-section .rounded-img img {
+    max-width: 270px;
+    height: 270px;
+  }
+}
+
+.rounded-img-section .text {
+  width: 60%;
+  color: #f7f7f7;
+}
+
+.rounded-img-section .text h2 {
+  font-size: 2.5rem;
+}
+
+@media all and (max-width: 768px) {
+  .rounded-img-section .text {
+    width: 100%;
+  }
+}
+
+.dropdown-cards-wrapper {
+  background-color: #BFBFBF;
+}
+
+.dropdown-cards-wrapper .dd-cards {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.dropdown-cards-wrapper .dd-cards ul {
+  background-color: #707070;
+  border-radius: 10px;
+}
+
+.dropdown-cards-wrapper .dd-cards ul .dd-card {
+  position: relative;
+  cursor: pointer;
+  border-bottom: 1px solid #BFBFBF;
+}
+
+.dropdown-cards-wrapper .dd-cards ul .dd-card:after {
+  background: url("../icons/arrow-down.png");
+  filter: invert(1);
+  content: '';
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  top: 25px;
+  right: 20px;
+}
+
+.dropdown-cards-wrapper .dd-cards ul .dd-card h2 {
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.dropdown-cards-wrapper .dd-cards ul .dd-card .dd-card-content {
+  cursor: initial;
+  background-color: white;
+  color: #707070;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+}
+
+.dropdown-cards-wrapper .dd-cards ul .dd-card .dd-card-content h2 {
+  margin-top: 0;
+  padding: 0;
+  padding-bottom: 20px;
+  width: 100%;
+  color: inherit;
+}
+
+.dropdown-cards-wrapper .dd-cards ul .dd-card .dd-card-content img {
+  width: 20%;
+  border: 10px solid #707070;
+}
+
+@media all and (max-width: 768px) {
+  .dropdown-cards-wrapper .dd-cards ul .dd-card .dd-card-content img {
+    width: 95%;
+    margin-bottom: 20px;
+  }
+}
+
+.dropdown-cards-wrapper .dd-cards ul .dd-card .dd-card-content p {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.dn {
+  display: none !important;
+}
+
+.form-section {
+  background-image: linear-gradient(-45deg, #707070 50%, #434343 50%);
+}
+
+.form-section form {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.form-section form .input-wrapper {
+  margin: 0.7%;
+  position: relative;
+}
+
+.form-section form .input-wrapper .input-title {
+  position: absolute;
+  margin: 0;
+  font-weight: bold;
+  top: 22%;
+  padding-left: 10px;
+}
+
+.form-section form .input-wrapper .input-title.textarea {
+  top: 7%;
+}
+
+.form-section form .input-wrapper .input {
+  background: #BFBFBF;
+  border-radius: 10px;
+  padding: 15px;
+  outline: none;
+  padding-left: 85px;
+  box-sizing: border-box;
+}
+
+.form-section form .input-wrapper textarea {
+  padding-left: 120px !important;
+  padding-top: 20px !important;
+  height: 200px;
+}
+
+.form-section form .input-wrapper .submit {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 35px;
+  padding-right: 35px;
+  cursor: pointer;
+  border-radius: 7px;
+  font-weight: bold;
+  border: none;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 48.6%;
+}
+
+@media all and (max-width: 768px) {
+  .w-50 {
+    width: 100%;
+  }
+}
+
+footer {
+  background-color: #313131;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+  color: white;
+  font-size: 1.5rem;
+}

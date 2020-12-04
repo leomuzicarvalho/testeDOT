@@ -1,0 +1,268 @@
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.slide-container{
+    position: relative;
+    & .slide-title{
+        width: 100%;
+        top: 0;
+        position: absolute;
+        text-align: center;
+        color: black;
+        z-index: 2;
+        & .arrow-down{
+            background:url('../icons/arrow-down.png');
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            border: none;
+            transition: 0.4s all;
+            outline: none;
+            cursor: pointer;
+            &:hover{
+                opacity: 0.6;
+            }
+        }
+    }
+    & .cards{
+        display: flex;
+        @media all and (max-width:768px){
+            flex-wrap: wrap;
+        }
+        justify-content: space-around;
+        align-items: center;
+        background-color: #454545;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        & .card-content{
+            max-width: 300px;
+            text-align: center;
+            color: #f2f2f2;
+        }
+        & .card {
+            border: 8px solid #6f6f6f;
+            height: auto !important;
+            color: #f2f2f2;
+            max-width: 300px;
+            & .card-img{
+                width: 100%;
+            }
+        }
+    }
+    & .each-slide{
+        & .slide-image-container{
+            height: 500px;
+        }
+    }
+    & .indicators{
+        position: absolute;
+        background-color:rgba(84,97,48,0.3);
+        bottom: 0;
+        width: 100%;
+        & li{
+            width: 50px !important;
+            height: 45px !important;
+        }
+        & .each-slideshow-indicator{
+            position: absolute;
+            &:before{
+                top: 50% !important;
+                left: 50% !important;
+                padding: 7px;
+                border: 7px solid black !important;
+                background: white !important;
+            }
+            &.active{
+                &:before{
+                    border: 7px solid white !important;
+                    background: darkgreen !important;
+                }
+            }
+        }
+    }
+    
+}
+.lightgray-bg{
+    background: #6f6f6f;
+}
+.flex{
+    display: flex;
+    @media all and (max-width:768px){
+        flex-wrap: wrap;
+    }
+}
+.space-around{
+    justify-content: space-around;
+}
+.rounded-img-section{
+    background-color:#6f6f6f;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 7%;
+    padding-right: 7%;
+    & .rounded-img{
+        & img{
+            max-width: 360px;
+            height: 360px;
+            @media all and (max-width:768px){
+                max-width: 270px;
+                height: 270px;
+            }
+            border: 15px solid #343434;
+            border-radius: 999px;
+        }
+        
+    }
+    & .text{
+        & h2{
+            font-size: 2.5rem;
+        }
+        width: 60%;
+        @media all and (max-width: 768px){
+            width: 100%;
+        }
+        color:#f7f7f7;
+    }
+}
+.dropdown-cards-wrapper{
+    background-color: #BFBFBF;
+    & .dd-cards{
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        & ul{
+            background-color: #707070;
+            border-radius: 10px;
+            & .dd-card{
+                position: relative;
+                cursor: pointer;
+                border-bottom: 1px solid #BFBFBF;
+                &:after{
+                    background: url('../icons/arrow-down.png');
+                    filter: invert(1);
+                    content: '';
+                    position: absolute;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 25px;
+                    height: 25px;
+                    top: 25px;
+                    right: 20px;
+                }
+                h2{
+                    color: white;
+                    margin: 0;
+                    padding: 20px;
+                }
+                & .dd-card-content{
+                    cursor: initial;
+                    background-color: white;
+                    color: #707070;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    padding: 20px;
+                    h2{
+                        margin-top: 0;
+                        padding: 0;
+                        padding-bottom: 20px;
+                        width: 100%;
+                        color: inherit;
+                    }
+                    img{
+                        width: 20%;
+                        border: 10px solid #707070;
+                        @media all and (max-width: 768px){
+                            width: 95%;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    p{
+                        width: 75%;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}
+.dn{
+    display: none !important;
+}
+.form-section{
+    background-image:
+    linear-gradient(
+      -45deg, 
+      #707070 50%,
+      #434343 50%,
+    );
+    form{
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 5%;
+        padding-right: 5%;
+        .input-wrapper{
+            margin: 0.7%;
+            position: relative;
+            .input-title{
+                position: absolute;
+                margin: 0;
+                font-weight: bold;
+                top: 22%;
+                padding-left: 10px;
+                &.textarea{
+                    top: 7%;
+                }
+            }
+            .input{
+                background: #BFBFBF;
+                border-radius: 10px;
+                padding: 15px;
+                outline: none;
+                padding-left: 85px;
+                box-sizing: border-box;
+            }
+            textarea{
+                padding-left: 120px !important;
+                padding-top: 20px !important;
+                height: 200px;
+            }
+            .submit{
+                padding-top: 12px;
+                padding-bottom: 12px;
+                padding-left: 35px;
+                padding-right: 35px;
+                cursor: pointer;
+                border-radius: 7px;
+                font-weight: bold;
+                border: none;
+            }
+        }
+    }
+}
+.w-100{
+    width: 100%;
+}
+.w-50{
+    width: 48.6%;
+    @media all and (max-width: 768px){
+        width: 100%;
+    }
+}
+footer{
+    background-color: #313131;
+    text-align: center;
+    padding: 20px;
+    p{
+        margin: 0;
+        color: white;
+        font-size: 1.5rem;
+    }
+}
